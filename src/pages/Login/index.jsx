@@ -10,7 +10,7 @@ const Login = () => {
     <>
       <Container>
         <Content>
-          <h1>Welcome to login</h1>
+          <h1>Bem-vindo ao login</h1>
           <form action="a">
             <Input placeholder="Digite seu email" />
             <Input placeholder="Digite sua senha" />

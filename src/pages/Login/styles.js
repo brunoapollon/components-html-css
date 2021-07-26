@@ -5,6 +5,11 @@ const Container = styled.div`
   display: flex;
   height: 100vh;
   width: 100%;
+  @media(max-width: 632px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Content = styled.div`
@@ -22,7 +27,11 @@ const Content = styled.div`
 
 const Background = styled.div`
   flex: 1;
-  background: url(${imgLogin});
+  background: url(${imgLogin}) no-repeat center;
+  background-size: cover;
+  @media(max-width: 632px) {
+    display: none;
+  }
 `;
 
 export { Container, Content, Background };

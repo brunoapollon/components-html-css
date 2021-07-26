@@ -1,17 +1,35 @@
+import React from "react";
 
+import { Container, LogoSpace, Content } from "./styles";
 
-function Header(){
+const Header = () => {
   return (
-    <ul class="container">
-    <li>
-        <a href="a">...</a>
-    </li>
-
-    <li class="container__item--right">
-        <a href="a">...</a>
-    </li>
-</ul>
-  )
-}
+    <Container>
+      <LogoSpace />
+      <Content>
+        <nav>
+          <ul>
+            <li>
+              <a href="a"> Page 1</a>
+            </li>
+            <li>
+              <a href="a"> Page 2</a>
+            </li>
+            <li>
+              <a href="a"> Page 3</a>
+            </li>
+            <li>
+              <a href="a"> Page 4</a>
+            </li>
+          </ul>
+        </nav>
+        <aside>
+          <a href="a"> My profile</a>
+          <a href="a"> Logout </a>
+        </aside>
+      </Content>
+    </Container>
+  );
+};
 
 export default Header;
