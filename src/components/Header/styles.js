@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { shade } from "polished";
 
 const Container = styled.div`
   width: 100%;
@@ -17,6 +18,9 @@ const Content = styled.div`
   }
   > nav,
   ul {
+    @media (max-width: 660px) {
+      display: none;
+    }
     display: flex;
     list-style: none;
   }
@@ -26,16 +30,34 @@ const Content = styled.div`
     > a {
       text-decoration: none;
       color: #fff;
+      &:hover {
+        color: ${shade(0.5, "#fff")};
+      }
     }
     margin-right: 30px;
   }
   > aside {
+    @media (max-width: 660px) {
+      display: none;
+    }
     margin-top: 15px;
     margin-left: auto;
     > a {
       text-decoration: none;
       color: #fff;
       margin: 15px 15px;
+      &:hover {
+        color: ${shade(0.5, "#fff")};
+      }
+    }
+  }
+  .menu-icon {
+    margin-top: 15px;
+    margin-left: auto;
+  }
+  @media (min-width: 660px) {
+    .menu-icon {
+      display: none;
     }
   }
 `;
